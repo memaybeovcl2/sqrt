@@ -48,6 +48,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
+            position: relative;
         }
         button:hover {
             transform: scale(1.1);
@@ -64,18 +65,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>iu mình hog 💕</h1>
+        <h1>Cj có iu e hog? 💕</h1>
         <div class="heart">❤️</div>
         <div class="buttons">
             <button onclick="acceptLove()">Có ❤️</button>
-            <button id="noButton" onmouseover="moveButton()">Không 😢</button>
+            <button id="noButton">Không 😢</button>
         </div>
     </div>
 
     <script>
         function acceptLove() {
-            alert("Yay! mình biết mà💖=))");
+            alert("Yay! e bt cj iu e rất nhiều mà 💖=))");
         }
+
+        document.getElementById('noButton').addEventListener('touchstart', moveButton);
+        document.getElementById('noButton').addEventListener('mouseover', moveButton);
 
         function moveButton() {
             let button = document.getElementById('noButton');
